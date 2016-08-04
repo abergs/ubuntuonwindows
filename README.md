@@ -22,3 +22,6 @@ Here we share resources, tips, known issues etc for "Bash On Ubuntu On Windows".
     export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
     ssh-add -l | grep "The agent has no identities" && ssh-add
 ```
+
+## Use Windows 10 Virtual desktop to have your own workspace
+Create a new virtual dekstop from `Win+Tab` and setup your ubuntu workspace. Or run 4 terminals on that screen, for different ssh sesssoin for example. Switch desktops easily and fast by either `Win+Ctrl+left` / `Win+Ctrl+right` or `win+tab tab enter`
