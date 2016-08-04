@@ -16,9 +16,9 @@ Here we share resources, tips, known issues etc for "Bash On Ubuntu On Windows".
 2. Add the following somewhere:
 
 
-    if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-    eval `ssh-agent`
-    ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+    `if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+      eval `ssh-agent`
+      ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
     fi
     export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-    ssh-add -l | grep "The agent has no identities" && ssh-add
+    ssh-add -l | grep "The agent has no identities" && ssh-add`
