@@ -5,7 +5,9 @@ Here we share resources, tips, known issues etc for "Bash On Ubuntu On Windows".
 ## How to Instsall Bash on Ubuntu on Windows
 1. Install the Windows 10 Anniversary Update
 2. Go to "Turn Windows features on or off"
-3. Scroll down to "Windows subsystem for Linux (Beta)"
+3. Scroll down to "Windows subsystem for Linux (Beta)" 
+ 
+
 (video: http://www.hanselman.com/blog/VIDEOHowToRunLinuxAndBashOnWindows10AnniversaryUpdate.aspx)
 
 ## Start an bash ssh-agent on launch
