@@ -4,7 +4,7 @@ This is a collaborative document where we help **new bash users** get the basics
 In other words: Here we share resources, tips, known issues etc for *Bash On Ubuntu On Windows*.
 
 
-## How to Instsall Bash on Ubuntu on Windows
+## How to Install Bash on Ubuntu in Windows 10 (Windows Subsystem for Linux)
 1. Install the Windows 10 Anniversary Update
 2. Go to "Turn Windows features on or off"
 3. Scroll down to "Windows subsystem for Linux (Beta)" 
