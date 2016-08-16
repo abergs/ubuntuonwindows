@@ -28,7 +28,7 @@ In other words: Here we share resources, tips, known issues etc for *Bash On Ubu
 ```
 
 ## Use Windows 10 Virtual desktop to have your own workspace
-Create a new virtual dekstop from `Win+Tab` and setup your ubuntu workspace. Or run 4 terminals on that screen, for different ssh sesssoin for example. Switch desktops easily and fast by either `Win+Ctrl+left` / `Win+Ctrl+right` or `win+tab tab enter`
+Create a new virtual desktop from `Win+Tab` and setup your ubuntu workspace. Or run 4 terminals on that screen, for different ssh sessions for example. Switch desktops easily and fast by either `Win+Ctrl+left` / `Win+Ctrl+right` or `win+tab tab enter`
 
 
 ## How to access the filesystem from Windows / Ubuntu
