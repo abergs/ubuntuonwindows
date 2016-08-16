@@ -1,5 +1,7 @@
 # Bash On Ubuntu On Windows 
-Here we share resources, tips, known issues etc for "Bash On Ubuntu On Windows".
+This is a collaborative document where we help **new bash users** get the basics things working in Bash. It's especially targeted for the users of *Bash On Ubuntu On Windows* - where the bash environment is fairly new.
+
+In other words: Here we share resources, tips, known issues etc for *Bash On Ubuntu On Windows*.
 
 
 ## How to Instsall Bash on Ubuntu on Windows
