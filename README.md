@@ -19,12 +19,29 @@ In other words: Here we share resources, tips, known issues etc for *Bash On Ubu
 
 2. Add the following somewhere:
    ``` 
-   if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-      eval `ssh-agent`
-      ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+    #!/bin/bash
+    
+    # Set up ssh-agent
+    SSH_ENV="$HOME/.ssh/environment"
+    
+    function start_agent {
+        echo "Initializing new SSH agent..."
+        touch $SSH_ENV
+        chmod 600 "${SSH_ENV}"
+        /usr/bin/ssh-agent | sed 's/^echo/#echo/' >> "${SSH_ENV}"
+        . "${SSH_ENV}" > /dev/null
+        /usr/bin/ssh-add
+    }
+    
+    # Source SSH settings, if applicable
+    if [ -f "${SSH_ENV}" ]; then
+        . "${SSH_ENV}" > /dev/null
+        kill -0 $SSH_AGENT_PID 2>/dev/null || {
+            start_agent
+        }
+    else
+        start_agent
     fi
-    export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-    ssh-add -l | grep "The agent has no identities" && ssh-add
 ```
 
 ## Use Windows 10 Virtual desktop to have your own workspace
