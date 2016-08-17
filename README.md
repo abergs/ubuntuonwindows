@@ -41,7 +41,7 @@ In other words: Here we share resources, tips, known issues etc for *Bash On Ubu
         }
     else
         start_agent
-    fiy
+    fi
 ```
 Then run `source ~/.bashrc` to reload your config.
 
