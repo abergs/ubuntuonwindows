@@ -41,8 +41,18 @@ In other words: Here we share resources, tips, known issues etc for *Bash On Ubu
         }
     else
         start_agent
-    fi
+    fiy
 ```
+Then run `source ~/.bashrc` to reload your config.
+
+## Troubleshoot ssh-agent forwarding
+Connect with ssh and check if you forward your keys by running `echo "$SSH_AUTH_LOCK"`. IF you get no output, that means it's not working. Make sure it's running (above script should work) and that your `~/.ssh/config` is configured to run ForwardAgent, for example:
+
+```
+Host 123.456.123.45
+ ForwardAgent yes
+```
+
 
 ## Use Windows 10 Virtual desktop to have your own workspace
 Create a new virtual desktop from `Win+Tab` and setup your ubuntu workspace. Or run 4 terminals on that screen, for different ssh sessions for example. Switch desktops easily and fast by either `Win+Ctrl+left` / `Win+Ctrl+right` or `win+tab tab enter`
