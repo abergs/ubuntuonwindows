@@ -63,3 +63,11 @@ Create a new virtual desktop from `Win+Tab` and setup your ubuntu workspace. Or 
 In Ubuntu, you can find your entire C drive under `/mnt/c`. (You have the same permissions as the User you launched Ubuntu with)
 
 In Windows, you can find your entire Ubuntu installation under `%LocalAppData%\lxss`. (C:/Users/YOURUSERNAME/AppData/Local/lxss)
+
+## Disable ding/beep/bell sound when tabbing
+You know that annoying bell sound you get when you try to autocomplete something and it doesn't exist? It's super loud and annoying, so lets mute it. Run this command and restart your shell to give peace to your ears:  
+
+`echo 'set bell-style none' >> ~/.inputrc`  
+
+Restart your shell and it's quiet :)
+
