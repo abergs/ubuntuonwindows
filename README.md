@@ -4,7 +4,7 @@ This is a collaborative document where we help **new bash users** get the basics
 In other words: Here we share resources, tips, known issues etc for *Bash On Ubuntu On Windows*.
 
 
-## How to Install Bash on Ubuntu in Windows 10 (Windows Subsystem for Linux)
+## 1. How to Install Bash on Ubuntu in Windows 10 (Windows Subsystem for Linux)
 1. Install the Windows 10 Anniversary Update
 2. Go to "Turn Windows features on or off"
 3. Scroll down to "Windows subsystem for Linux (Beta)" 
@@ -12,7 +12,7 @@ In other words: Here we share resources, tips, known issues etc for *Bash On Ubu
 
 (video: http://www.hanselman.com/blog/VIDEOHowToRunLinuxAndBashOnWindows10AnniversaryUpdate.aspx)
 
-## Start an bash ssh-agent on launch
+## 2. Start an bash ssh-agent on launch
 1. Open the config  
 
     `$ nano ~/.bashrc`
@@ -45,7 +45,7 @@ In other words: Here we share resources, tips, known issues etc for *Bash On Ubu
 ```
 Then run `source ~/.bashrc` to reload your config.
 
-## Troubleshoot ssh-agent forwarding
+## 3. Troubleshoot ssh-agent forwarding
 Connect with ssh and check if you forward your keys by running `echo "$SSH_AUTH_LOCK"`. IF you get no output, that means it's not working. Make sure it's running (above script should work) and that your `~/.ssh/config` is configured to run ForwardAgent, for example:
 
 ```
@@ -54,17 +54,17 @@ Host 123.456.123.45
 ```
 
 
-## Use Windows 10 Virtual desktop to have your own workspace
+## 4. Use Windows 10 Virtual desktop to have your own workspace
 Create a new virtual desktop from `Win+Tab` and setup your ubuntu workspace. Or run 4 terminals on that screen, for different ssh sessions for example. Switch desktops easily and fast by either `Win+Ctrl+left` / `Win+Ctrl+right` or `win+tab tab enter`
 
 
-## How to access the filesystem from Windows / Ubuntu
+## 5.  How to access the filesystem from Windows / Ubuntu
 
 In Ubuntu, you can find your entire C drive under `/mnt/c`. (You have the same permissions as the User you launched Ubuntu with)
 
 In Windows, you can find your entire Ubuntu installation under `%LocalAppData%\lxss`. (C:/Users/YOURUSERNAME/AppData/Local/lxss)
 
-## Disable ding/beep/bell sound when tabbing
+## 6. Disable ding/beep/bell sound when tabbing
 You know that annoying bell sound you get when you try to autocomplete something and it doesn't exist? It's super loud and annoying, so lets mute it. Run this command and restart your shell to give peace to your ears:  
 
 `echo 'set bell-style none' >> ~/.inputrc`  
