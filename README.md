@@ -74,6 +74,8 @@ Restart your shell and it's quiet :)
 
 ## 7.  How to configure proxy settings in apt
 
+If your network uses a proxy-server, services like apt-get, git, wget, and curl, etc. would not be able to access internet directly.
+
 To add prox in apt, modify `/etc/apt/apt.conf` and add the following:
 ```
    Acquire::http::Proxy "http://username:password@proxy.server:port";
@@ -101,11 +103,13 @@ To add system wide proxy settings, go to `/etc/environment` and add the followin
 
 Example: 
 
-username: `johnwick` password `password` proxy-server `proxy.foobar.com` port `8080`
-
 `  export http_proxy="http://johnwick:password@proxy.foobar.com:8080";`
   
   Use `source /etc/environment` to load the new environment variables.
   
-  
- 
+To make git work behind proxy use the following commands
+
+```
+git config --global http.proxy http://johnwick:password@proxy.foobar.com:8080`
+git config --global https.proxy https://johnwick:password@proxy.foobar.com:8080
+```
