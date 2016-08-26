@@ -113,3 +113,5 @@ To make git work behind proxy use the following commands
 git config --global http.proxy http://johnwick:password@proxy.foobar.com:8080`
 git config --global https.proxy https://johnwick:password@proxy.foobar.com:8080
 ```
+## 8. Program compatibility - What works, what doesn't?
+This [crowdsourced list of programs and their compatibility](https://github.com/ethanhs/WSL-Programs) gives you a searchable list for compatibility. Want to know if `apt` works 100%? Just check the list. Also worth a mention, the [Official repository](https://github.com/microsoft/BashOnWindows/) contains a full list of all issues reported.
