@@ -2,7 +2,7 @@
 This is a collaborative document where we help **new bash users** get the basics things working in Bash. It's especially targeted for the users of *Bash On Ubuntu On Windows* - where the bash environment is fairly new.
 
 In other words: Here we share resources, tips, known issues etc for *Bash On Ubuntu On Windows*.
-
+[![Analytics](https://ga-beacon.appspot.com/UA-37656767-10/repo-readme)](https://github.com/abergs/ubuntuonwindows)
 
 ## 1. How to Install Bash on Ubuntu in Windows 10 (Windows Subsystem for Linux)
 1. Install the Windows 10 Anniversary Update
