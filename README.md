@@ -83,6 +83,13 @@ To add prox in apt, modify `/etc/apt/apt.conf` and add the following:
 ```
 Do a `sudo apt-get update` afterwards to update repository infromation
 
+Example: 
+
+username: `johnwick` password `password` proxy-server `proxy.foobar.com` port `8080`
+
+`
+   Acquire::http::Proxy "http://johnwick:password@proxy.foobar.com:8080";`
+
 To add system wide proxy settings, go to `/etc/environment` and add the following:
 
 ```
@@ -92,3 +99,4 @@ To add system wide proxy settings, go to `/etc/environment` and add the followin
    export socks_proxy="socks://username:password@proxy.server:port"
 ```
   Use `source /etc/environment` to load the new environment variables.
+ 
