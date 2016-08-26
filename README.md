@@ -71,3 +71,27 @@ You know that annoying bell sound you get when you try to autocomplete something
 
 Restart your shell and it's quiet :)
 
+
+## 7.  How to configure proxy settings in apt
+
+1. To add prox in apt, modify `/etc/apt/apt.conf` and add the following:
+
+```
+Acquire::http::Proxy "http://username:password@proxy.server:port";
+Acquire::https::Proxy "https://username:password@proxy.server:port";
+Acquire::ftp::Proxy "ftp://username:password@proxy.server:port";
+Acquire::socks::Proxy "socks://username:password@proxy.server:port";
+```
+
+Do a `sudo apt-get update` afterwards to update repository infromation
+
+2. To add system wide proxy settings, go to `/etc/environment` and add the following:
+
+```
+export http_proxy="http://username:password@proxy.server:port"
+export https_proxy="https://username:password@proxy.server:port"
+export ftp_proxy="ftp://username:password@proxy.server:port"
+export socks_proxy="socks://username:password@proxy.server:port"
+````
+
+Use `source /etc/environment` to load the new environment variables
