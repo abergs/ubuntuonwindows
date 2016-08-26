@@ -98,5 +98,14 @@ To add system wide proxy settings, go to `/etc/environment` and add the followin
    export ftp_proxy="ftp://username:password@proxy.server:port"
    export socks_proxy="socks://username:password@proxy.server:port"
 ```
+
+Example: 
+
+username: `johnwick` password `password` proxy-server `proxy.foobar.com` port `8080`
+
+`  export http_proxy="http://johnwick:password@proxy.foobar.com:8080";`
+  
   Use `source /etc/environment` to load the new environment variables.
+  
+  
  
