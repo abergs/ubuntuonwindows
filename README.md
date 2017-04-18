@@ -13,11 +13,11 @@ In other words: Here we share resources, tips, known issues etc for *Bash On Ubu
 (video: http://www.hanselman.com/blog/VIDEOHowToRunLinuxAndBashOnWindows10AnniversaryUpdate.aspx)
 
 ## 2. Start an bash ssh-agent on launch
-1. Open the config  
+2.1: Open the config  
 
     `$ nano ~/.bashrc`
 
-2. Add the following somewhere:
+2.2: Add the following somewhere:
    ``` 
     #!/bin/bash
     
@@ -43,7 +43,8 @@ In other words: Here we share resources, tips, known issues etc for *Bash On Ubu
         start_agent
     fi
 ```
-Then run `source ~/.bashrc` to reload your config.
+2.3: Then run `source ~/.bashrc` to reload your config.
+
 
 ## 3. Troubleshoot ssh-agent forwarding
 Connect with ssh and check if you forward your keys by running `echo "$SSH_AUTH_SOCK"`. If you get no output, that means it's not working. Make sure it's running (above script should work) and that your `~/.ssh/config` is configured to run ForwardAgent, for example:
