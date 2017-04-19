@@ -77,6 +77,11 @@ Restart your shell and it's quiet :)
 
 If your network uses a proxy-server, services like apt-get, git, wget, and curl, etc. would not be able to access internet directly.
 
+There is an open source tool : [ProxyMan](https://github.com/himanshub16/ProxyMan), which lets you easily configure system-wide proxy settings from the command-line in one go. [Download latest release](https://github.com/himanshub16/ProxyMan/releases/latest/).
+*As of now, ProxyMan is capable of managing GNOME desktop, /etc/environment, .bashrc, apt.conf, git, npm, and Dropbox proxy settings*
+
+However, you can also manually modify the configuration file.
+
 To add prox in apt, modify `/etc/apt/apt.conf` and add the following:
 ```
    Acquire::http::Proxy "http://username:password@proxy.server:port";
