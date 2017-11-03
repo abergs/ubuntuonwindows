@@ -79,7 +79,7 @@ export BROWSER=/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.e
 ### 6.2: Use Symlinks to open Windows Programs
 One use case is to open your text editor to the current directory. Interop + symlinks make this possible. For example:
 ```
-ln -s code /mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe
+ln -s /mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe code
 ```
 Now in any directory, type `code` and your text editor opens. Even better, type `code .` and it opens that directory, ready for editing.
 
