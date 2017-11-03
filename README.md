@@ -59,13 +59,31 @@ Host 123.456.123.45
 Create a new virtual desktop from `Win+Tab` and setup your ubuntu workspace. Or run 4 terminals on that screen, for different ssh sessions for example. Switch desktops easily and fast by either `Win+Ctrl+left` / `Win+Ctrl+right` or `win+tab tab enter`
 
 
-## 5.  How to access the filesystem from Windows / Ubuntu
+## 5. How to access the filesystem from Windows / Ubuntu
 
 In Ubuntu, you can find your entire C drive under `/mnt/c`. (You have the same permissions as the User you launched Ubuntu with)
 
 In Windows, you can find your entire Ubuntu installation under `%LocalAppData%\lxss`. (C:/Users/YOURUSERNAME/AppData/Local/lxss)
 
-## 6. Disable ding/beep/bell sound when tabbing
+## 6. Make full use of Interop
+With [interoperability](https://msdn.microsoft.com/en-us/commandline/wsl/interop), you can open Windows programs from WSL. Here are some ways to use to your advantage:
+
+### 6.1: Set a Default Windows Browser
+Some commands, such as Heroku CLI's `heroku open`, need to open a browser. There's no default browser in WSL by default, but one easy way to set this up is by adding the following to `~/.bashrc`: 
+
+```
+# replace with relevant browser
+export BROWSER=/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
+```
+
+### 6.2: Use Symlinks to open Windows Programs
+One use case is to open your text editor to the current directory. Interop + symlinks make this possible. For example:
+```
+ln -s /mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe code
+```
+Now in any directory, type `code` and your text editor opens. Even better, type `code .` and it opens that directory, ready for editing.
+
+## 7. Disable ding/beep/bell sound when tabbing
 You know that annoying bell sound you get when you try to autocomplete something and it doesn't exist? It's super loud and annoying, so lets mute it. Run this command and restart your shell to give peace to your ears:  
 
 `echo 'set bell-style none' >> ~/.inputrc`  
@@ -73,7 +91,7 @@ You know that annoying bell sound you get when you try to autocomplete something
 Restart your shell and it's quiet :)
 
 
-## 7.  How to configure proxy settings in apt
+## 8.  How to configure proxy settings in apt
 
 If your network uses a proxy-server, services like apt-get, git, wget, and curl, etc. would not be able to access internet directly.
 
@@ -119,5 +137,5 @@ To make git work behind proxy use the following commands
 git config --global http.proxy http://johnwick:password@proxy.foobar.com:8080`
 git config --global https.proxy https://johnwick:password@proxy.foobar.com:8080
 ```
-## 8. Program compatibility - What works, what doesn't?
+## 9. Program compatibility - What works, what doesn't?
 This [crowdsourced list of programs and their compatibility](https://github.com/ethanhs/WSL-Programs) gives you a searchable list for compatibility. Want to know if `apt` works 100%? Just check the list. Also worth a mention, the [Official repository](https://github.com/microsoft/BashOnWindows/) contains a full list of all issues reported.
