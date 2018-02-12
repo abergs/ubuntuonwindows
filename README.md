@@ -139,3 +139,13 @@ git config --global https.proxy https://johnwick:password@proxy.foobar.com:8080
 ```
 ## 9. Program compatibility - What works, what doesn't?
 This [crowdsourced list of programs and their compatibility](https://github.com/ethanhs/WSL-Programs) gives you a searchable list for compatibility. Want to know if `apt` works 100%? Just check the list. Also worth a mention, the [Official repository](https://github.com/microsoft/BashOnWindows/) contains a full list of all issues reported.
+
+## 10. Mapping a Driver Letter to your linux root folder
+
+Open a Winodws Terminal (cmd) and:
+
+```
+subst l: c:\Users\path\to\your\rootfs
+```
+
+Now you can access the root linux folder typing l: in the Winodws Command, ou Explorer
