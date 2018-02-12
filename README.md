@@ -65,6 +65,10 @@ In Ubuntu, you can find your entire C drive under `/mnt/c`. (You have the same p
 
 In Windows, you can find your entire Ubuntu installation under `%LocalAppData%\lxss`. (C:/Users/YOURUSERNAME/AppData/Local/lxss)
 
+> Note: Your ubuntu installation might end up on different paths depending on installation method, [check this guide to find yours](https://askubuntu.com/questions/759880/where-is-the-ubuntu-file-system-root-directory-in-windows-nt-subsystem-and-vice)
+
+
+
 ## 6. Make full use of Interop
 With [interoperability](https://msdn.microsoft.com/en-us/commandline/wsl/interop), you can open Windows programs from WSL. Here are some ways to use to your advantage:
 
