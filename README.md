@@ -142,10 +142,12 @@ This [crowdsourced list of programs and their compatibility](https://github.com/
 
 ## 10. Mapping a Driver Letter to your linux root folder
 
-Open a Winodws Terminal (cmd) and:
+Open a Windows Terminal (cmd) and:
 
 ```
 subst l: c:\Users\path\to\your\rootfs
 ```
 
-Now you can access the root linux folder typing l: in the Winodws Command, ou Explorer
+Now you can access the root linux folder typing l: in the Winodws Command, ou Explorer.
+
+Your rootfs might be located in different paths: [Check this guide on askubuntu to find your linux folder on windows](https://askubuntu.com/questions/759880/where-is-the-ubuntu-file-system-root-directory-in-windows-nt-subsystem-and-vice)
