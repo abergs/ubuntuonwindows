@@ -83,9 +83,18 @@ export BROWSER=/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.e
 ### 6.2: Use Symlinks to open Windows Programs
 One use case is to open your text editor to the current directory. Interop + symlinks make this possible. For example:
 ```
-ln -s /mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe code
+ln -s /mnt/c/Program\ Files/Microsoft\ VS\ Code/Code.exe /usr/local/bin/code
 ```
 Now in any directory, type `code` and your text editor opens. Even better, type `code .` and it opens that directory, ready for editing.
+
+### 6.3: wslview command
+If you are used to using the `open` command in a terminal on macOS, the equivalent command for WSL is `wslview`.  If you wish to use `open` in the same way, you can add the following to the end of your `~/.bashrc`:
+
+```
+# open to match macOS-style use
+alias open=/usr/bin/wslview
+```
+Now you can use `open` like you would in macOS.
 
 ## 7. Disable ding/beep/bell sound when tabbing
 You know that annoying bell sound you get when you try to autocomplete something and it doesn't exist? It's super loud and annoying, so lets mute it. Run this command and restart your shell to give peace to your ears:  
